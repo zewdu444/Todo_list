@@ -74,7 +74,7 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
->
+> https://zewdu444.github.io/Todo_list/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -113,7 +113,7 @@ To install this project in your local machine use
 
 To run the project, execute the following command:
 
-> In visual studio code you can use Go to dist folder then open index.html in live server.
+> In visual studio code Go to dist folder then open index.html in live server.
 
 <!-- AUTHORS -->
 
