@@ -68,7 +68,7 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
- <li>Todo list applicaton</li>
+ <li>Display daily tasks</li>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p><!-- LIVE DEMO -->
 
@@ -82,12 +82,16 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> to run on your localhost just copy the whole project and open index.html in your browser.
+> to run on your localhost clone the project to local folder
+> cd Todo_list
+> npm i
+> npm run server
+> open your brower locate to localhost:3000
 
 ### Setup
 
-> <p> git clone https://github.com/zewdu444/Webpack_boilerplate.git</p>
-> cd Webpack_boilerplate
+> <p> git clone https://github.com/zewdu444/Todo_list.git</p>
+> cd Todo_list
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -96,18 +100,20 @@ After you're finished please remove all the comments and instructions!
 In order to run this project you only need:
 
 - latest web-browser
+- node.js and npm
 
 ### Install
 
 To install this project in your local machine use
 
 > npm i
+> npm run build
 
 ### Usage
 
 To run the project, execute the following command:
 
-> In visual studio code you can use Go live server or simply you can open index.html in browser
+> In visual studio code you can use Go to dist folder then open index.html in live server.
 
 <!-- AUTHORS -->
 
@@ -123,13 +129,13 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Implement Weback
+> Add and remove todo list
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/zewdu444/Awesome_books_ES6/issues).
+Feel free to check the [issues page](https://github.com/zewdu444/Todo_list/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- SUPPORT -->
