@@ -1,3 +1,92 @@
-.hello {
-  background-color: bisque;
+body {
+  margin: 0;
+  background-color: #fafafa;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  box-shadow: 0 4px 8px 0 rgba(0 0 0 / 20%);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  max-width: 375px;
+}
+
+hr {
+  width: 99.9%;
+  border: 0.05px solid #edeaea;
+  color: #edeaea;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.titleholder {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #717070;
+}
+
+.inputfield {
+  height: 40px;
+  border: none;
+  font-style: italic;
+  width: 90%;
+}
+
+.inputfield:focus {
+  outline: none;
+}
+
+.inputholder {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 8px;
+}
+
+.enterbutton {
+  border: none;
+  background-color: white;
+}
+
+.clearbutton {
+  background-color: #fafafa;
+  height: 40px;
+  border: none;
+  color: #717070;
+  font-size: medium;
+}
+
+.todolist {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  font-size: medium;
+  color: #2f2f2f;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.todolist > li {
+  padding-left: 0.125rem;
+  width: 100%;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.todolist > li > p {
+  display: inline-flex;
+  padding-left: 0.25rem;
+  width: 85%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0.6875rem;
 }
