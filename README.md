@@ -69,6 +69,10 @@ After you're finished please remove all the comments and instructions!
 ### Key Features <a name="key-features"></a>
 
  <li>Display daily tasks</li>
+ <li>Create daily tasks</li>
+ <li>Edit daily tasks</li>
+<li>Remove tasks</li>
+<li>store in local storage</li>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p><!-- LIVE DEMO -->
 
@@ -82,7 +86,8 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> to run on your localhost clone the project to local folder
+to run on your localhost clone the project to local folder
+
 > cd Todo_list
 > npm i
 > npm run server
@@ -129,7 +134,7 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Add and remove todo list
+> interactive list
 
 ## 🤝 Contributing <a name="contributing"></a>
 
