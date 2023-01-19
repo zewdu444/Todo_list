@@ -72,7 +72,9 @@ After you're finished please remove all the comments and instructions!
  <li>Create daily tasks</li>
  <li>Edit daily tasks</li>
 <li>Remove tasks</li>
-<li>store in local storage</li>
+<li>Store in local storage</li>
+<li>Strike through complete tasks</li>
+<li>Clear completed tasks </li>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p><!-- LIVE DEMO -->
 
@@ -134,7 +136,7 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> interactive list
+> Improve into single page application with navigation
 
 ## 🤝 Contributing <a name="contributing"></a>
 

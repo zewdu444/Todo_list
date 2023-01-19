@@ -90,7 +90,8 @@ list.addEventListener('click', (e) => {
   }
 });
 
-const pressfunction = () => {
+// loop through completed tasks
+const clearSelected = () => {
   let counter = 0;
   for (let k = 0; k < tasks.length; k += 1) {
     if (tasks[k].completed === true) {
@@ -107,6 +108,6 @@ const pressfunction = () => {
   }
 };
 clearButton.addEventListener('click', () => {
-  pressfunction();
+  clearSelected();
   dynamicDisplay();
 });
