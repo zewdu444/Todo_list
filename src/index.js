@@ -4,7 +4,7 @@ import tasks from './module/taskStore.js';
 import dynamicDisplay from './module/readTask.js';
 import createTask from './module/createTask.js';
 import deleteTask from './module/deleteTask.js';
-import updateTask from './module/updateTask.js';
+import { updateTask, completeTask } from './module/updateTask.js';
 import { storeTasks, getTasks } from './module/localStorage.js';
 
 const insertButton = document.getElementById('insertbutton');
@@ -13,6 +13,7 @@ const list = document.getElementById('list');
 const listItem = document.getElementsByClassName('listitem');
 const deleteItem = document.getElementsByClassName('deletebutton');
 const moveItem = document.getElementsByClassName('movebutton');
+const clearButton = document.getElementById('clearbutton');
 // compare local storage and tasks array
 window.addEventListener('load', () => {
   if (tasks.length === 0 && getTasks().length !== 0) {
@@ -70,5 +71,43 @@ list.addEventListener('click', (e) => {
       });
     }
     storeTasks(tasks);
+  } else if (e.target && e.target.nodeName === 'INPUT') {
+    const id = e.target.id.toString();
+    const index = Number(id.slice(5));
+    const checkCompleted = document.getElementById(e.target.id);
+    const editText = document.querySelector(`#text${index}`);
+    if (checkCompleted.checked === true) {
+      completeTask(index, true);
+      editText.innerHTML = editText.innerHTML.strike();
+      updateTask(index, editText.innerHTML);
+      storeTasks(tasks);
+    } else {
+      completeTask(index, false);
+      editText.innerHTML = editText.innerHTML.replace('<strike>', '');
+      updateTask(index, editText.innerHTML);
+      storeTasks(tasks);
+    }
   }
+});
+
+// loop through completed tasks
+const clearSelected = () => {
+  let counter = 0;
+  for (let k = 0; k < tasks.length; k += 1) {
+    if (tasks[k].completed === true) {
+      counter += 1;
+    }
+  }
+  for (let i = 0; i < counter; i += 1) {
+    for (let j = 0; j < tasks.length; j += 1) {
+      if (tasks[j].completed === true) {
+        deleteTask(tasks[j].index);
+        storeTasks(tasks);
+      }
+    }
+  }
+};
+clearButton.addEventListener('click', () => {
+  clearSelected();
+  dynamicDisplay();
 });
