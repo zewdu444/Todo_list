@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo list app</title>
-  <script defer src="./index.js"></script></head>
+  <script defer src="runtime.js"></script><script defer src="index.js"></script></head>
   <body>
     <main>
       <div class="titleholder">
@@ -17,15 +17,15 @@
           class="inputfield"
           type="text"
           name=""
-          id=""
+          id="inputtask"
           placeholder="Add to your list..."
         />
-        <button class="enterbutton">
+        <button id="insertbutton" class="enterbutton">
           <i class="fa-solid fa-arrow-right"></i>
         </button>
       </div>
       <hr />
-      <ul class="todolist"></ul>
+      <ul class="todolist" id="list"></ul>
       <button class="clearbutton">Clear all completed</button>
     </main>
   </body>
