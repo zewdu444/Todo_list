@@ -6,4 +6,11 @@ const updateTask = (index, description) => {
     tasks[index].description = description;
   }
 };
-export default updateTask;
+
+const completeTask = (index, completed) => {
+  index = tasks.findIndex((object) => object.index === index);
+  if (index !== -1) {
+    tasks[index].completed = completed;
+  }
+};
+export { updateTask, completeTask };
