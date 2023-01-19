@@ -1,16 +1,14 @@
 import tasks from './taskStore.js';
 
 const updateTask = (index, description) => {
-  index = tasks.findIndex((object) => object.index === index);
-  if (index !== -1) {
-    tasks[index].description = description;
-  }
+  tasks.filter((object) => object.index === index).forEach((object) => {
+    object.description = description;
+  });
 };
 
 const completeTask = (index, completed) => {
-  index = tasks.findIndex((object) => object.index === index);
-  if (index !== -1) {
-    tasks[index].completed = completed;
-  }
+  tasks.filter((object) => object.index === index).forEach((object) => {
+    object.completed = completed;
+  });
 };
 export { updateTask, completeTask };
