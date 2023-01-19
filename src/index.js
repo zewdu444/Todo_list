@@ -13,7 +13,7 @@ const list = document.getElementById('list');
 const listItem = document.getElementsByClassName('listitem');
 const deleteItem = document.getElementsByClassName('deletebutton');
 const moveItem = document.getElementsByClassName('movebutton');
-// const checkCompleted = document.getElementsByClassName('checkcompleted');
+const clearButton = document.getElementById('clearbutton');
 // compare local storage and tasks array
 window.addEventListener('load', () => {
   if (tasks.length === 0 && getTasks().length !== 0) {
@@ -88,4 +88,25 @@ list.addEventListener('click', (e) => {
       storeTasks(tasks);
     }
   }
+});
+
+const pressfunction = () => {
+  let counter = 0;
+  for (let k = 0; k < tasks.length; k += 1) {
+    if (tasks[k].completed === true) {
+      counter += 1;
+    }
+  }
+  for (let i = 0; i < counter; i += 1) {
+    for (let j = 0; j < tasks.length; j += 1) {
+      if (tasks[j].completed === true) {
+        deleteTask(tasks[j].index);
+        storeTasks(tasks);
+      }
+    }
+  }
+};
+clearButton.addEventListener('click', () => {
+  pressfunction();
+  dynamicDisplay();
 });
